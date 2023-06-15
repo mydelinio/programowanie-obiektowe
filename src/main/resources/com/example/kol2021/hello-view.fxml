@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" prefHeight="500.0" prefWidth="500.0" spacing="20.0"
+      xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.example.kol2021.HelloController"
+      onKeyPressed="#translateCanvas">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Label fx:id="welcomeText"/>
+    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+        <Button mnemonicParsing="false" onAction="#startServer" text="Start server">
+            <HBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </HBox.margin>
+        </Button>
+        <ColorPicker fx:id="color" onAction="#changeColor">
+            <value>
+                <Color/>
+            </value>
+        </ColorPicker>
+        <Button mnemonicParsing="false" onAction="#joinToServer" text="Connect">
+            <HBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </HBox.margin>
+        </Button>
+    </HBox>
+    <Label fx:id="offset" text="(X,Y)"/>
+    <Canvas fx:id="canvas" height="450.0" onMouseClicked="#insertPoints" width="450.0"/>
+</VBox>

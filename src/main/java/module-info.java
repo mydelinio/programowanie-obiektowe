@@ -1,7 +1,11 @@
-module com.example.demo {
+module com.example.kol2021 {
     requires javafx.controls;
     requires javafx.fxml;
 
-    opens com.example.demo to javafx.fxml;
-    exports com.example.demo;
+    requires org.controlsfx.controls;
+    requires org.kordamp.bootstrapfx.core;
+    requires org.json;
+
+    opens com.example.kol2021 to javafx.fxml;
+    exports com.example.kol2021;
 }
