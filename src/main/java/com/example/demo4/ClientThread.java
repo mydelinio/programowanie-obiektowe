@@ -26,7 +26,6 @@ public class ClientThread extends Thread {
             writer = new PrintWriter(output, true);
             while (reader.readLine() != null) {
 
-
             }
             System.out.println("closed");
             server.removeClient(this);

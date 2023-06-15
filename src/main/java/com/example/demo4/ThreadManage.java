@@ -18,7 +18,6 @@ public class ThreadManage extends Thread {
     public void run() {
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-
             String message;
             while ((message = reader.readLine()) != null) {
                 controller.appendWord(message);

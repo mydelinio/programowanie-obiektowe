@@ -27,7 +27,7 @@ public class Server extends Thread {
             public void run() {
                 broadcast(wordBag.get());
             }
-        }, 0, 5000);
+        }, 10, 100);
     }
 
     public void run(){
